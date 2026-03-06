@@ -3,6 +3,8 @@
 Poniższy szablon służy do ujednoliconego opisu każdego liceum. Każda metryka oceniana jest w skali 1–5 (gdzie 5 = najwyższy poziom) lub opisowo, jeśli zaznaczono inaczej. Dane uzupełniane są na podstawie materiałów poziomu 0.
 
 > **Uwaga dla agenta syntezy:** Opisy metryk pisane *kursywą* pod nagłówkami sekcji to wskazówki interpretacyjne dla agenta — **nie pojawiają się w pliku wynikowym.** W pliku wynikowym każda sekcja zawiera wyłącznie nagłówek (`###`) i pola z wartościami (`- **Pole:** ...`).
+>
+> Materiały źródłowe pochodzą wyłącznie ze strony własnej szkoły — należy traktować je krytycznie. Szkoła może przedstawiać się lepiej niż jest w rzeczywistości. Przykład: długa lista kół zainteresowań, ale w aktualnościach brak śladów ich działalności — kółko teatralne figuruje w ofercie, ale czy coś wystawia?
 
 ---
 
