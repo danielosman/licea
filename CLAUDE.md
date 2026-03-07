@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This project collects and structures information about Warsaw high schools (Polish: *licea*). It is organized in two processing levels: raw scraped data (Level 0) and normalized structured data (Level 1).
+This project collects and structures information about Warsaw high schools (Polish: *licea*). It is organized in three processing levels: raw scraped data (Level 0), normalized structured data (Level 1), and cross-school comparative analysis (Level 2).
 
 ## Project Structure
 
@@ -11,6 +11,7 @@ licea/
 ├── CLAUDE.md
 ├── level0.md            # Level 0 scraping process (detailed)
 ├── level1.md            # Level 1 processing process (detailed)
+├── level2.md            # Level 2 cross-school comparison process (detailed)
 ├── template.md          # Level 1 output template
 ├── init/
 │   ├── Licea_Warszawa_Final.xlsx   # Source spreadsheet with school data
@@ -61,3 +62,7 @@ Faithful dump of the school's website. No interpretation. See **`level0.md`** fo
 ## Level 1 — Structured Data
 
 Normalized school profile following `template.md`. Input comes exclusively from `data/content/` files (and `data/sitemap.md` for page metadata). See **`level1.md`** for the full process (including the multi-agent approach and synthesis rules).
+
+## Level 2 — Cross-School Comparison
+
+Comparative analysis across all completed Level 1 profiles. Fills in the `Wyróżniki na tle innych szkół` section and adds a `cross_score` (ocena po porównaniu) with justification for every scored metric in each school's `{folder}.md`. See **`level2.md`** for the full process.
