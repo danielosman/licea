@@ -1,0 +1,644 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+const schoolsDir = path.resolve(process.cwd(), '../schools');
+
+function loadSchools() {
+  const schools: any[] = [];
+  for (const folder of fs.readdirSync(schoolsDir).sort()) {
+    const jsonFile = path.join(schoolsDir, folder, `${folder}.json`);
+    if (fs.existsSync(jsonFile)) {
+      schools.push(JSON.parse(fs.readFileSync(jsonFile, 'utf-8')));
+    }
+  }
+  return schools.sort((a, b) => parseInt(a.school_id) - parseInt(b.school_id));
+}
+
+const schools = loadSchools();
+
+// ── Field labels ──────────────────────────────────────────────────────────────
+const FL: Record<string, string> = {
+  avg_score: 'Ocena średnia',
+  synthetic_score: 'Ocena syntetyczna',
+  erasmus: 'Erasmus+',
+  external_collaboration: 'Współpraca zewnętrzna',
+  guests: 'Goście i prelegenci',
+  teacher_availability: 'Dostępność nauczycieli',
+  current_topics: 'Aktualne tematy',
+  new_technologies: 'Nowe technologie',
+  justification: 'Uzasadnienie',
+  psychologist: 'Psycholog / pedagog',
+  support_programs: 'Programy wsparcia',
+  mental_wellbeing: 'Dobrostan psychiczny',
+  diversity_acceptance: 'Akceptacja inności',
+  anti_bullying: 'Przeciwdziałanie przemocy',
+  opinion_expression: 'Wyrażanie opinii',
+  clubs: 'Koła zainteresowań',
+  unusual_activities: 'Zajęcia nietypowe',
+  interest_development: 'Rozwój zainteresowań',
+  volunteering: 'Wolontariat',
+  student_initiatives: 'Inicjatywy uczniowskie',
+  student_council: 'Samorząd',
+  english: 'Angielski',
+  german: 'Niemiecki',
+  spanish: 'Hiszpański',
+  other: 'Inne języki',
+  bilingual_classes: 'Klasy dwujęzyczne',
+  bilingual_language: 'Język dwujęzyczny',
+  certificates: 'Certyfikaty',
+  language_choice: 'Wybór języków',
+  language_choice_details: 'Szczegóły wyboru',
+  level_groups: 'Grupy poziomowe',
+  native_speakers: 'Native speakerzy',
+  notes: 'Uwagi',
+  classes_notes: 'Uwagi do klas',
+  cafeteria: 'Stołówka / sklepik',
+  library: 'Biblioteka',
+  auditorium: 'Aula',
+  nurse_office: 'Gabinet pielęgniarki',
+  specialized_labs: 'Pracownie specjalistyczne',
+  building_condition: 'Stan techniczny',
+  courts: 'Boiska',
+  gyms: 'Sale gimnastyczne',
+  fitness_room: 'Siłownia / fitness',
+  pool: 'Basen',
+  access_outside_lessons: 'Dostęp poza lekcjami',
+  sports_clubs: 'Sekcje sportowe',
+  sports_achievements: 'Osiągnięcia sportowe',
+  class_profiles_stem: 'Profile klas — ścisłe',
+  class_profiles_humanities: 'Profile klas — humanistyczne',
+  clubs_stem: 'Koła ścisłe',
+  clubs_humanities: 'Koła humanistyczne',
+  olympiads_stem: 'Olimpiady ścisłe',
+  olympiads_humanities: 'Olimpiady humanistyczne',
+  left_avg_score: 'Lewicowy (średnia)',
+  left_synthetic_score: 'Lewicowy (syntetyczna)',
+  right_avg_score: 'Prawicowy (średnia)',
+  right_synthetic_score: 'Prawicowy (syntetyczna)',
+  academics_avg_score: 'Nauka (średnia)',
+  academics_synthetic_score: 'Nauka (syntetyczna)',
+  hobbies_avg_score: 'Pasje (średnia)',
+  hobbies_synthetic_score: 'Pasje (syntetyczna)',
+  initiatives: 'Inicjatywy i zmiany',
+  extracurricular_topics: 'Aktualność zajęć',
+  contradictions: 'Sprzeczności / puste hasła',
+};
+
+// ── Metric definitions ────────────────────────────────────────────────────────
+const SCORED_METRICS = [
+  { key: 'openness',          label: 'Otwartość',          type: 'standard',
+    detailFields: ['erasmus','external_collaboration','guests','teacher_availability','current_topics','new_technologies'] },
+  { key: 'friendliness',      label: 'Przyjazność',        type: 'standard',
+    detailFields: ['psychologist','support_programs','mental_wellbeing','diversity_acceptance','anti_bullying','opinion_expression'] },
+  { key: 'engagement',        label: 'Zaangażowanie',      type: 'standard',
+    detailFields: ['clubs','unusual_activities','interest_development','volunteering','student_initiatives','student_council'] },
+  { key: 'intellectual_profile', label: 'Profil intelektualny', type: 'intellectual',
+    detailFields: ['class_profiles_stem','class_profiles_humanities','clubs_stem','clubs_humanities','olympiads_stem','olympiads_humanities'] },
+  { key: 'worldview',         label: 'Światopogląd',       type: 'worldview',    detailFields: [] as string[] },
+  { key: 'school_balance',    label: 'Równowaga szkolna',  type: 'balance',      detailFields: [] as string[] },
+  { key: 'innovation',        label: 'Innowacyjność',      type: 'standard',
+    detailFields: ['initiatives','extracurricular_topics'] },
+  { key: 'message_coherence', label: 'Spójność przekazu',  type: 'standard',
+    detailFields: ['contradictions'] },
+];
+
+const UNSCORED_METRICS = [
+  { key: 'languages',     label: 'Języki',
+    fields: ['english','german','spanish','other','bilingual_classes','bilingual_language','certificates','language_choice','language_choice_details','level_groups','native_speakers','notes'] },
+  { key: 'classes',       label: 'Klasy',       fields: null as null | string[] },
+  { key: 'infrastructure',label: 'Infrastruktura',
+    fields: ['cafeteria','library','auditorium','nurse_office','specialized_labs','building_condition','notes'] },
+  { key: 'sports',        label: 'Sport',
+    fields: ['courts','gyms','fitness_room','pool','access_outside_lessons','sports_clubs','sports_achievements','notes'] },
+];
+
+const SURVEY_FIELDS = [
+  'survey_count','matura_score_pct','matura_pass_rate_pct','atmosphere_pct',
+  'learning_enjoyment_pct','student_relations_pct','student_teacher_relations_pct',
+  'teaching_modernity_pct','recommendation_rate_pct','break_quality_pct',
+  'avg_study_time_after_school','student_count_2022','year_founded','amenities',
+];
+const SL: Record<string, string> = {
+  survey_count: 'Liczba ankiet',
+  matura_score_pct: 'Wyniki matur (%)',
+  matura_pass_rate_pct: 'Zdawalność matur (%)',
+  atmosphere_pct: 'Atmosfera (%)',
+  learning_enjoyment_pct: 'Przyjemność z nauki (%)',
+  student_relations_pct: 'Relacje między uczniami (%)',
+  student_teacher_relations_pct: 'Relacje uczeń–nauczyciel (%)',
+  teaching_modernity_pct: 'Nowoczesność nauczania (%)',
+  recommendation_rate_pct: 'Polecałbym/łabym (%)',
+  break_quality_pct: 'Jakość przerw (%)',
+  avg_study_time_after_school: 'Czas nauki po szkole',
+  student_count_2022: 'Liczba uczniów (2022)',
+  year_founded: 'Rok założenia',
+  amenities: 'Udogodnienia',
+};
+
+// ── Value rendering ───────────────────────────────────────────────────────────
+function esc(s: unknown): string {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function renderValue(val: unknown): string {
+  if (val === null || val === undefined || val === '') return '—';
+  if (typeof val === 'boolean') return val ? 'tak' : 'nie';
+  if (Array.isArray(val)) {
+    if (val.length === 0) return '—';
+    if (typeof val[0] === 'object' && val[0] !== null && 'letter' in (val[0] as object)) {
+      return (val as any[]).map(cls =>
+        `<div class="class-item">` +
+        `<strong>${esc(cls.letter)}</strong>${cls.name ? ` — ${esc(cls.name)}` : ''}` +
+        (cls.extended_subjects?.length ? `<br><span class="muted">Rozszerzenia: ${cls.extended_subjects.map(esc).join(', ')}</span>` : '') +
+        (cls.notes ? `<br><span class="muted">${esc(cls.notes)}</span>` : '') +
+        `</div>`
+      ).join('');
+    }
+    if (val.length <= 3) return val.map(v => esc(String(v))).join(', ');
+    return `<ul>${val.map(v => `<li>${esc(String(v))}</li>`).join('')}</ul>`;
+  }
+  return esc(String(val));
+}
+
+// ── Score rendering (for a single school's cell) ──────────────────────────────
+function synthScoreHtml(metric: any, type: string): string {
+  if (!metric) return '<span class="dash">—</span>';
+  switch (type) {
+    case 'intellectual':
+      return `<div class="score-pair">` +
+        `<div><div class="score-sub-label">Humanistyczny</div><div class="score">${metric.humanities?.synthetic_score ?? '—'}</div></div>` +
+        `<div><div class="score-sub-label">Ścisły</div><div class="score">${metric.stem?.synthetic_score ?? '—'}</div></div>` +
+        `</div>`;
+    case 'worldview':
+      return `<div class="score-pair">` +
+        `<div><div class="score-sub-label">Lewicowy</div><div class="score">${metric.left_synthetic_score ?? '—'}</div></div>` +
+        `<div><div class="score-sub-label">Prawicowy</div><div class="score">${metric.right_synthetic_score ?? '—'}</div></div>` +
+        `</div>`;
+    case 'balance':
+      return `<div class="score-pair">` +
+        `<div><div class="score-sub-label">Nauka</div><div class="score">${metric.academics_synthetic_score ?? '—'}</div></div>` +
+        `<div><div class="score-sub-label">Pasje</div><div class="score">${metric.hobbies_synthetic_score ?? '—'}</div></div>` +
+        `</div>`;
+    default:
+      return `<div class="score">${metric.synthetic_score ?? '—'}</div>`;
+  }
+}
+
+function avgScoreHtml(metric: any, type: string): string {
+  if (!metric) return '';
+  switch (type) {
+    case 'intellectual':
+      return fieldHtml('avg_score', metric.humanities?.avg_score, 'Humanistyczny (średnia)') +
+             fieldHtml('avg_score', metric.stem?.avg_score, 'Ścisły (średnia)');
+    case 'worldview':
+      return fieldHtml('left_avg_score', metric.left_avg_score) +
+             fieldHtml('right_avg_score', metric.right_avg_score);
+    case 'balance':
+      return fieldHtml('academics_avg_score', metric.academics_avg_score) +
+             fieldHtml('hobbies_avg_score', metric.hobbies_avg_score);
+    default:
+      return fieldHtml('avg_score', metric.avg_score);
+  }
+}
+
+function fieldHtml(key: string, val: unknown, labelOverride?: string): string {
+  if (val === null || val === undefined) return '';
+  const label = labelOverride ?? FL[key] ?? key;
+  return `<div class="field"><div class="field-label">${esc(label)}</div><div class="field-value">${renderValue(val)}</div></div>`;
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function anyHas(fieldPath: string, metricKey: string): boolean {
+  return schools.some(s => {
+    const m = s.metrics?.[metricKey];
+    return m != null && m[fieldPath] != null;
+  });
+}
+---
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Licea Warszawa — porównanie</title>
+  <style is:global>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      background: #fff;
+      color: #222;
+    }
+
+    /* ── Picker ──────────────────────────────────── */
+    .picker {
+      padding: 12px 16px;
+      border-bottom: 2px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: #f7f7f8;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .picker-btn {
+      padding: 5px 14px;
+      border: 1.5px solid #bbb;
+      border-radius: 20px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      color: #444;
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+    }
+    .picker-btn:hover { border-color: #777; }
+    .picker-btn.active { background: #1a1a2e; border-color: #1a1a2e; color: #fff; }
+
+    /* ── Comparison grid ─────────────────────────── */
+    /* Each .row is a flex row; each .cell is one school's column */
+    .comparison { width: 100%; }
+
+    .row {
+      display: flex;
+      align-items: stretch;
+      border-bottom: 1px solid #e4e4e4;
+    }
+    .row:last-child { border-bottom: none; }
+
+    .cell {
+      flex: 1 1 0;
+      min-width: 0;
+      max-width: 640px;
+      padding: 12px 16px;
+      border-right: 1px solid #e4e4e4;
+    }
+    .cell:last-child { border-right: none; }
+    .cell.hidden { display: none; }
+
+    /* ── Full-width labels ───────────────────────── */
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 16px 8px;
+      background: #e8e8f0;
+      border-bottom: 1px solid #d0d0e0;
+      color: #333;
+    }
+    .metric-header {
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 12px 16px 8px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    /* ── School header cell ──────────────────────── */
+    .header-cell { padding: 18px 16px 14px; }
+    .school-name {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+    .school-meta { color: #666; font-size: 12px; margin: 0 0 6px; }
+    .school-link { font-size: 12px; color: #1a1a2e; text-decoration: none; }
+    .school-link:hover { text-decoration: underline; }
+
+    /* ── Fields ──────────────────────────────────── */
+    .field { padding: 6px 0; border-top: 1px solid #f0f0f0; }
+    .field:first-child { border-top: none; }
+    .field-label {
+      font-style: italic;
+      color: #999;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 3px;
+    }
+    .field-value {
+      font-size: 13px;
+      line-height: 1.55;
+      color: #222;
+    }
+    .field-value ul { margin: 4px 0 0; padding-left: 18px; }
+    .field-value li { margin-bottom: 2px; }
+
+    .class-item {
+      padding: 4px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .class-item:last-child { border-bottom: none; }
+    .muted { color: #666; }
+
+    /* ── Scores ──────────────────────────────────── */
+    .score-cell { text-align: center; padding: 10px 16px; }
+    .score {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a2e;
+      padding: 6px 0;
+      line-height: 1;
+    }
+    .score-pair {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+      padding: 6px 0;
+    }
+    .score-pair > div { text-align: center; }
+    .score-pair .score { font-size: 22px; }
+    .score-sub-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    /* ── Metric details (expand/collapse) ────────── */
+    .metric-details { display: none; }
+    .metric-details.expanded { display: block; }
+
+    .toggle-bar {
+      text-align: center;
+      padding: 8px 16px 10px;
+      border-bottom: 1px solid #e4e4e4;
+    }
+    .toggle-btn {
+      padding: 5px 20px;
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #555;
+      transition: background 0.1s, color 0.1s;
+    }
+    .toggle-btn:hover { background: #f0f0f0; color: #222; }
+
+    /* ── Metric section alternating bg ───────────── */
+    .metric-section { background: #fff; }
+    .metric-section:nth-child(even) { background: #fafafa; }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 500px) {
+      .cell { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── School picker ─────────────────────────────────────────────────────── -->
+<div class="picker">
+  {schools.map(s => {
+    const short = s.folder.replace(/^\d+_/, '');
+    return (
+      <button class="picker-btn active" data-school={s.school_id} type="button">
+        {s.school_id} — {short}
+      </button>
+    );
+  })}
+</div>
+
+<!-- ── Comparison rows ───────────────────────────────────────────────────── -->
+<div class="comparison" id="comparison">
+
+  {/* ── School headers ── */}
+  <div class="row">
+    {schools.map(s => (
+      <div class="cell header-cell" data-school={s.school_id}>
+        <p class="school-name">{s.name}</p>
+        <p class="school-meta">{s.district}{s.address ? `, ${s.address}` : ''}</p>
+        {s.website && <a class="school-link" href={s.website} target="_blank" rel="noopener">{s.website}</a>}
+      </div>
+    ))}
+  </div>
+
+  {/* ── Self description ── */}
+  <div class="section-title">Co szkoła mówi o sobie</div>
+  <div class="row">
+    {schools.map(s => (
+      <div class="cell" data-school={s.school_id}>{s.self_description || '—'}</div>
+    ))}
+  </div>
+
+  {/* ── Distinguishing features (only if any school has it) ── */}
+  {schools.some(s => s.distinguishing_features) && (
+    <>
+      <div class="section-title">Wyróżniki</div>
+      <div class="row">
+        {schools.map(s => (
+          <div class="cell" data-school={s.school_id}>{s.distinguishing_features || '—'}</div>
+        ))}
+      </div>
+    </>
+  )}
+
+  {/* ── Summary ── */}
+  <div class="section-title">Podsumowanie</div>
+  <div class="row">
+    {schools.map(s => (
+      <div class="cell" data-school={s.school_id}>{s.summary || '—'}</div>
+    ))}
+  </div>
+
+  {/* ══ SCORED METRICS ══════════════════════════════════════════════════════ */}
+  <div class="section-title">Metryki</div>
+
+  {SCORED_METRICS.map(meta => {
+    if (!schools.some(s => s.metrics?.[meta.key])) return null;
+    const detailsId = `details-${meta.key}`;
+
+    return (
+      <div class="metric-section">
+        <div class="metric-header">{meta.label}</div>
+
+        {/* Synthetic scores row */}
+        <div class="row">
+          {schools.map(s => (
+            <div class="cell score-cell" data-school={s.school_id}
+              set:html={synthScoreHtml(s.metrics?.[meta.key], meta.type)} />
+          ))}
+        </div>
+
+        {/* Justification row */}
+        <div class="row">
+          {schools.map(s => {
+            const j = s.metrics?.[meta.key]?.justification;
+            return (
+              <div class="cell" data-school={s.school_id}>
+                <div class="field">
+                  <div class="field-label">Uzasadnienie</div>
+                  <div class="field-value">{j || '—'}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ── Expandable details ── */}
+        <div class="metric-details" id={detailsId}>
+
+          {/* Avg scores */}
+          <div class="row">
+            {schools.map(s => (
+              <div class="cell" data-school={s.school_id}
+                set:html={avgScoreHtml(s.metrics?.[meta.key], meta.type)} />
+            ))}
+          </div>
+
+          {/* Detail fields — one row per field, only if any school has it */}
+          {meta.detailFields.map(fk => {
+            if (!schools.some(s => s.metrics?.[meta.key]?.[fk] != null)) return null;
+            return (
+              <div class="row">
+                {schools.map(s => {
+                  const val = s.metrics?.[meta.key]?.[fk];
+                  return (
+                    <div class="cell" data-school={s.school_id}>
+                      <div class="field">
+                        <div class="field-label">{FL[fk] ?? fk}</div>
+                        <div class="field-value" set:html={renderValue(val ?? null)} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+
+        <div class="toggle-bar">
+          <button class="toggle-btn" data-details={detailsId} type="button">Rozwiń szczegóły</button>
+        </div>
+      </div>
+    );
+  })}
+
+  {/* ══ UNSCORED METRICS ════════════════════════════════════════════════════ */}
+  {UNSCORED_METRICS.map(meta => {
+    if (!schools.some(s => s.metrics?.[meta.key])) return null;
+
+    return (
+      <div class="metric-section">
+        <div class="metric-header">{meta.label}</div>
+
+        {meta.key === 'classes' ? (
+          <>
+            {/* Classes array */}
+            <div class="row">
+              {schools.map(s => (
+                <div class="cell" data-school={s.school_id}
+                  set:html={renderValue(s.metrics?.classes ?? null)} />
+              ))}
+            </div>
+            {/* classes_notes */}
+            {schools.some(s => s.metrics?.classes_notes) && (
+              <div class="row">
+                {schools.map(s => {
+                  const notes = s.metrics?.classes_notes;
+                  return (
+                    <div class="cell" data-school={s.school_id}>
+                      <div class="field">
+                        <div class="field-label">Uwagi do klas</div>
+                        <div class="field-value">{notes || '—'}</div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </>
+        ) : (
+          (meta.fields ?? []).map(fk => {
+            if (!schools.some(s => s.metrics?.[meta.key]?.[fk] != null)) return null;
+            return (
+              <div class="row">
+                {schools.map(s => {
+                  const val = s.metrics?.[meta.key]?.[fk];
+                  return (
+                    <div class="cell" data-school={s.school_id}>
+                      <div class="field">
+                        <div class="field-label">{FL[fk] ?? fk}</div>
+                        <div class="field-value" set:html={renderValue(val ?? null)} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })
+        )}
+      </div>
+    );
+  })}
+
+  {/* ══ SURVEY ══════════════════════════════════════════════════════════════ */}
+  {schools.some(s => s.survey) && (
+    <>
+      <div class="section-title">Dane z ankiet</div>
+      {SURVEY_FIELDS.map(key => {
+        if (!schools.some(s => s.survey?.[key] != null)) return null;
+        return (
+          <div class="row">
+            {schools.map(s => {
+              const val = s.survey?.[key];
+              return (
+                <div class="cell" data-school={s.school_id}>
+                  <div class="field">
+                    <div class="field-label">{SL[key] ?? key}</div>
+                    <div class="field-value" set:html={renderValue(val ?? null)} />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
+    </>
+  )}
+
+</div><!-- /comparison -->
+
+<script>
+  // ── School picker ─────────────────────────────────────────────────────────
+  const pickerBtns = document.querySelectorAll<HTMLButtonElement>('.picker-btn');
+
+  pickerBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const schoolId = btn.dataset.school!;
+      const isActive = btn.classList.contains('active');
+      if (isActive && document.querySelectorAll('.picker-btn.active').length <= 1) return;
+
+      btn.classList.toggle('active');
+      const nowActive = btn.classList.contains('active');
+
+      document.querySelectorAll<HTMLElement>(`.cell[data-school="${schoolId}"]`).forEach(cell => {
+        cell.classList.toggle('hidden', !nowActive);
+      });
+    });
+  });
+
+  // ── Metric expand/collapse ────────────────────────────────────────────────
+  document.querySelectorAll<HTMLButtonElement>('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const detailsEl = document.getElementById(btn.dataset.details!);
+      if (!detailsEl) return;
+      const expanded = detailsEl.classList.toggle('expanded');
+      btn.textContent = expanded ? 'Zwiń szczegóły' : 'Rozwiń szczegóły';
+    });
+  });
+</script>
+
+</body>
+</html>

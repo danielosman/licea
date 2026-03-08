@@ -30,7 +30,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ## Metryki
 
 ### Otwartość
-*Czy szkoła jest otwarta na nowe inicjatywy, projekty zewnętrzne i współpracę z innymi instytucjami? Jak aktywnie zaprasza i angażuje środowisko? Wskaźniki: programy wymiany, Erasmus+, współpraca z uczelniami i organizacjami, goście zewnętrzni, dostępność nauczycieli, podejmowanie aktualnych tematów, adopcja nowych technologii.*
 
 - **Ocena:** `2.6 (3)`
 - **Erasmus+:** `nie`
@@ -44,7 +43,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Przyjazność
-*Czy atmosfera w szkole sprzyja uczniom — czy szkoła dba o relacje, dobre samopoczucie i poczucie bezpieczeństwa? Wskaźniki: psycholog/pedagog, programy wsparcia, proaktywny dobrostan psychiczny, akceptacja inności, polityka antybullyingowa, przestrzeń na wyrażanie opinii.*
 
 - **Ocena:** `3.2 (4)`
 - **Psycholog / pedagog:** `tak`
@@ -58,7 +56,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Zaangażowanie
-*Na ile uczniowie i nauczyciele aktywnie uczestniczą w życiu szkoły — koła zainteresowań, samorząd, projekty, olimpiady, wolontariat i inne formy aktywności pozalekcyjnej. Uwaga na jakość zaangażowania: czy inicjatywy są oddolne czy odgórne, czy szkoła wspiera indywidualny rozwój pasji.*
 
 - **Ocena:** `3.9 (4)`
 - **Koła zainteresowań:** `Teatr szkolny „Nie-Na-Żarty"; koło dziennikarskie (redakcja gazetki „Propozycje", spotkania w każdy piątek); Szkolne Koło PCK; Szkolny Klub Ośmiu „Dąbrowski" (wolontariat); sekcja plastyczno-artystyczna; koła przedmiotowe (wzmiankowane ogólnie bez pełnej listy); drużyny sportowe: koszykówka dziewcząt i chłopców, siatkówka dziewcząt i chłopców, piłka ręczna dziewcząt, piłka nożna, drużyna biegowa`
@@ -72,7 +69,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Języki
-*Jakie języki obce są nauczane w szkole? Czy oferuje klasy dwujęzyczne lub certyfikaty? Kluczowe: czy języki są przypisane do klasy z góry, czy uczeń może je wybrać samodzielnie podczas nauki.*
 
 - **Angielski:** `tak`
 - **Niemiecki:** `tak`
@@ -101,7 +97,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Infrastruktura
-*Jak wygląda baza materialna szkoły — budynek, stan sal, dostępność pracowni, biblioteka, aula, stołówka, szatnie i inne udogodnienia dla uczniów.*
 
 - **Stołówka / sklepik:** `stołówka`
 - **Biblioteka:** `tak`
@@ -114,7 +109,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Sport
-*Jakie możliwości sportowe oferuje szkoła — boiska, sale gimnastyczne, basen, sekcje sportowe, udział w rozgrywkach miejskich i ogólnopolskich.*
 
 - **Boiska:** `jedno boisko wielofunkcyjne (otwarte 2006 r., nowoczesna nawierzchnia) — 7 dyscyplin jednocześnie: koszykówka, siatkówka, piłka nożna, piłka ręczna, bieg, skok w dal, pchnięcie kulą`
 - **Sale gimnastyczne:** `dwie — duża sala gimnastyczna i mała sala gimnastyczna (tenis stołowy)`
@@ -128,7 +122,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Profil intelektualny
-*Czy szkoła kładzie większy nacisk na nauki ścisłe czy humanistyczne? Ocena na podstawie: struktury profili klas (rozszerzone przedmioty), kół zainteresowań, olimpiad, projektów i języka materiałów promocyjnych.*
 
 - **Humanistyczny:** `3.2` (4)
 - **Ścisły:** `2.6` (3)
@@ -146,7 +139,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Światopogląd
-*Przybliżona orientacja światopoglądowa szkoły, oszacowana na podstawie języka używanego w materiałach własnych. Nie jest to ocena wartościująca — służy wyłącznie charakterystyce środowiska szkolnego.*
 
 - **Lewicowy:** `2.3` (2)
 - **Prawicowy:** `2.9` (3)
@@ -165,7 +157,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Równowaga szkolna
-*Na ile szkoła skupia się na nauce i wynikach formalnych (egzaminy, rankingi, olimpiady przedmiotowe), a na ile zachęca uczniów do rozwijania własnych pasji, zainteresowań i inicjatyw? Wskaźniki: oferta kół i projektów uczniowskich, sposób komunikowania sukcesów przez szkołę, elastyczność i przestrzeń na działania z własnego pomysłu.*
 
 - **Nauka:** `3.2` (4)
 - **Pasje:** `3.9` (4)
@@ -174,7 +165,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Innowacyjność
-*Na ile szkoła wychodzi poza model tradycyjnego polskiego liceum? Czy wprowadza nowe rozwiązania dydaktyczne, reaguje na aktualne wyzwania i zainteresowania uczniów, podejmuje tematy istotne globalnie? Wskaźniki: tematyka zajęć pozalekcyjnych (tradycyjna i zachowawcza czy odpowiadająca współczesnym trendom), programy eksperymentalne, nowe inicjatywy, zmiany wprowadzone w ostatnich latach.*
 
 - **Ocena:** `2.7 (3)`
 - **Inicjatywy i zmiany:** `Nowa klasa IF (matematyka + geografia + WOS) od 2026/27 poszerzająca ofertę edukacyjną; nowe zajęcia uzupełniające — interdyscyplinarna edukacja kosmiczna w klasie IC (2026/27); pilotażowy projekt „Klasa TN. Drugi Dzwonek" z Teatrem Narodowym (2021/2022) jako jedyna szkoła średnia w Polsce; projekt tutoringowy AGH zakończony publikacją naukową uczennicy; Autorski Program Edukacji Humanitarnej wolontariatu (od 2004 r.); rozbudowany wielopoziomowy system wsparcia psychologiczno-pedagogicznego (coroczna diagnoza ankietowa potrzeb + dostosowany cykl warsztatów); program doradztwa zawodowego regularnie aktualizowany; wdrożenie katalogu bibliotecznego online (MOL NET+ 2019/20); akcja bookcrossingu (2022)`
@@ -184,7 +174,6 @@ XXXVII LO im. Jarosława Dąbrowskiego to szkoła z silną tożsamością kultur
 ---
 
 ### Spójność przekazu
-*Na ile szkoła rzeczywiście wierzy w to, co pisze o sobie? Metryka ocenia wewnętrzną zgodność materiałów własnych szkoły: czy deklarowane wartości i priorytety mają pokrycie w konkretnych przykładach, czy różne części witryny mówią tym samym głosem, i czy treści z jednego miejsca nie przeczą treściom z innego. Wysoki wynik oznacza przekaz spójny i wiarygodny — niski sygnalizuje puste hasła, przesadzone twierdzenia lub wyraźne sprzeczności między materiałami.*
 
 - **Ocena:** `4.0 (3)`
 - **Sprzeczności / puste hasła:** `Deklaracja dostępności informuje, że budynek nie ma podjazdu z platformą, wind ani toalet dla niepełnosprawnych — co stoi w pewnej sprzeczności z deklarowaną opieką pedagoga specjalnego nad uczniami z niepełnosprawnością (bariera fizyczna w dostępie do szkoły). Ranking Perspektyw: szkoła przy 2024 r. chwali się wyższym miejscem niż rok wcześniej, tymczasem 2025 r. przynosi wyraźny spadek z 19. na 29. miejsce w Warszawie (zmiana historyczna, nie sprzeczność, ale sygnał rozbieżności narracji). Ogólnikowe wzmianki o „kołach przedmiotowych" bez ich szczegółowego wymienienia. Hasło „Uczniowie odnoszą sukcesy sportowe" bez konkretu — skontrastowane przez Agent C szczegółowymi danymi o konkretnych medalach i mistrzach.`

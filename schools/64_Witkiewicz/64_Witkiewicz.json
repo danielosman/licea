@@ -1,0 +1,235 @@
+{
+  "school_id": "64",
+  "folder": "64_Witkiewicz",
+  "name": "LXIV Liceum Ogólnokształcące im. Stanisława Ignacego Witkiewicza",
+  "district": "Żoliborz",
+  "address": "ul. Elbląska 51",
+  "website": "https://liceum64.pl",
+  "self_description": "Szkoła konsekwentnie prezentuje się przez trzy tożsamości: „Witkacy jest szkołą sukcesu\" (13. miejsce w Ogólnopolskim Rankingu Liceów Perspektyw 2025, 6. w Warszawie), „jesteśmy szkołą olimpijską\" (284 finalistów olimpiad na szczeblu centralnym) oraz „od 2019/2020 Witkacy jest liceum eksperymentalnym\" — bez sztywnych profili, z indywidualnym wyborem rozszerzeń i systemem trymestralnym. Kluczową wartością jest „inność\": uczniowie wprost opisują ją jako główny atut szkoły, a patron — Witkacy, nonkonformistyczny artysta i filozof — nadaje szkole wyraźnie awangardowy charakter. Szkoła podkreśla atmosferę wolności i bliskich relacji, realizowaną m.in. przez program Tutoringu Rozwojowego i obecność dwóch wychowawców w każdej klasie. Hasłem dyrektora jest: „Wielkie rzeczy wymagają wielkiego wysiłku\" — szkoła łączy ambicje akademickie z filozofią indywidualnego rozwoju.",
+  "distinguishing_features": null,
+  "summary": "LXIV LO „Witkacy\" to jedna z czołowych warszawskich szkół, łącząca wyjątkowo silne wyniki akademickie (top 13 w Polsce, 284 finalistów olimpiad) z nowatorskim modelem pedagogicznym: brak stałych profili klasowych, lekcje 60-minutowe, rok szkolny w trymestrach i obowiązkowy tutoring dla każdego ucznia klasy I. Szkoła wyróżnia się bogatą kulturą artystyczną — SOFA (Sceniczny Otwarty Festiwal Artystyczny) z ponad 13 edycjami i WICFEST to flagowe wydarzenia organizowane przez samych uczniów. Profil intelektualny jest wyraźnie humanistyczno-artystyczny (patron Witkacy, 65 godzin kół tygodniowo), przy równocześnie silnej tradycji ścisłej (koła olimpijskie z fizyki, matematyki, biologii). Program wychowawczy świadczy o realnej trosce o dobrostan uczniów: czteroosobowy zespół specjalistów, Polityka Ochrony Dzieci, deklarowana inkluzywność i pomoc finansowa.",
+  "metrics": {
+    "openness": {
+      "avg_score": 3.1,
+      "synthetic_score": 3,
+      "erasmus": false,
+      "external_collaboration": "Polsko-Niemiecka Współpraca Młodzieży (dofinansowanie wymian); Politechnika Warszawska (wykład inauguracyjny); Towarzystwo Szkół Twórczych (TST), Stowarzyszenie Szkół Aktywnych (SSA) i Stowarzyszenie Nauczycieli Olimpijskich (SNO); Poradnia Psychologiczno-Pedagogiczna nr 3; CDZ, WCIES, Biuro Edukacji m.st. Warszawy, Urząd Pracy; Stowarzyszenie Przyjaciół LXIV LO „Nienasycenie\"; organizacje pozarządowe i instytucje edukacji obywatelskiej (program wychowawczy)",
+      "guests": "dr Tomasz Pietrzak z Politechniki Warszawskiej — wykład inauguracyjny na otwarcie roku szkolnego 2024/25 (zaawansowane materiały funkcjonalne); program profilaktyczny przewiduje zapraszanie seksuologów, psychologów, ratowników medycznych, specjalistów od uzależnień, socjologów, lekarzy i policji; doradcy zawodowi i przedstawiciele uczelni w ramach doradztwa zawodowego",
+      "teacher_availability": "tutorzy prowadzą regularne indywidualne rozmowy z uczniami klas I; dyrektor przyjmuje po wcześniejszym umówieniu pn.–pt.; psycholog, pedagog i doradca zawodowy dostępni do konsultacji indywidualnych; poradnia PP nr 3 czynna pn.–pt. 7:00–16:00",
+      "current_topics": "program doradztwa zawodowego uwzględnia transformację cyfrową, zieloną gospodarkę, pracę zdalną i wielokulturowość; program profilaktyczny obejmuje cyberprzemoc, neuroróżnorodność, profilaktykę chorób zakaźnych i bieżące wydarzenia społeczno-polityczne",
+      "new_technologies": "mLegitymacja (legitymacja na telefonie z elementami dynamicznymi); e-dziennik Vulcan; kontakt przez Microsoft Teams; katalog biblioteczny online (molnet.mol.pl); elektroniczny system zamawiania posiłków; e-portfolio uczniów w doradztwie zawodowym",
+      "justification": "Szkoła prowadzi wieloletnie, zinstytucjonalizowane wymiany z Niemcami (od 1995 roku) i należy do trzech sieci pedagogicznych (TST, SSA, SNO). Zewnętrzni specjaliści zapraszani są regularnie w ramach profilaktyki i doradztwa zawodowego, a uczelnia (Politechnika Warszawska) gościła na inauguracji roku. Brak Erasmus+ i ograniczone dane o szerszej współpracy kulturalnej obniżają ocenę."
+    },
+    "friendliness": {
+      "avg_score": 3.8,
+      "synthetic_score": 4,
+      "psychologist": true,
+      "support_programs": "czteroosobowy zespół: psycholog Anna Tulczyńska (psychoterapia poznawczo-behawioralna), psycholog Sylwia Gruchała, pedagog Anna Maciejewska, pedagog specjalny Anna Zalewska-Rudo; doradca zawodowy Daniela Bartosiak; gabinet w pokoju 310; współpraca z Poradnią PP nr 3 i Ośrodkiem Środowiskowej Opieki Psychologicznej (bezpłatne konsultacje bez skierowania); Indywidualny Program Nauczania dla uczniów z udokumentowanymi potrzebami; Polityka Ochrony Dzieci przed krzywdzeniem (procedura Niebieskiej Karty)",
+      "mental_wellbeing": "Program Tutoringu Rozwojowego — każdy uczeń klasy I wybiera dwóch tutorów spośród swoich nauczycieli; tutorzy prowadzą regularne indywidualne rozmowy, pomagają w adaptacji i odkrywaniu zdolności; warsztaty równowagi emocjonalnej i asertywności w klasach; zajęcia integracyjne i obóz integracyjny dla pierwszoklasistów",
+      "diversity_acceptance": "szkoła deklaruje otwartość „bez względu na tożsamość narodową, religijną i płciową\"; program wychowawczy stawia inkluzywny język jako cel wychowawczy; wsparcie dla uczniów neuroróżnorodnych i z niepełnosprawnościami; filozofia szkoły oparta na indywidualizmie i akceptacji „inności\" — wartość eksponowana wprost przez uczniów i patrona (Witkacy jako ikona nonkonformizmu)",
+      "anti_bullying": "Polityka Ochrony Dzieci przed krzywdzeniem z procedurą Niebieskiej Karty; warsztaty z zakresu reagowania na przemoc rówieśniczą i cyberprzemoc; policja jako realizator programu profilaktycznego; uczniowie szkoleni w rozpoznawaniu i zgłaszaniu przemocy",
+      "opinion_expression": "aktywny Samorząd Uczniowski z wybieranym przewodniczącym i zarządem reprezentującym klasy I–IV (regulamin, ordynacja wyborcza, uchwały); tutoring kształtuje „budowanie zaufania uczniów do własnych wniosków i opinii\" oraz samodzielność myślenia; uczniowie wybierają rozszerzenia i tutorów samodzielnie; program wychowawczy uznaje asertywność za cel wychowawczy",
+      "justification": "Szkoła dysponuje kompletnym, dobrze obsadzonym zapleczem psychologiczno-pedagogicznym, autorskim programem tutoringu, polityką antyprzemocową z konkretnymi procedurami oraz wyraźnymi i operacyjnymi deklaracjami inkluzywności. Wielopoziomowa pomoc finansowa jest rzadkością. Brak szczegółowych danych o badaniach klimatu szkolnego i dobrostanu nieznacznie obniża ocenę."
+    },
+    "engagement": {
+      "avg_score": 4.3,
+      "synthetic_score": 5,
+      "clubs": [
+        "koło angielskiego maturalne i olimpijskie",
+        "koło niemieckiego maturalne i olimpijskie",
+        "koło francuskiego maturalne i olimpijskie",
+        "koło rosyjskiego maturalne",
+        "koło hiszpańskiego maturalne i olimpijskie",
+        "koło j. polskiego maturalne i olimpijskie",
+        "koło historii maturalne i olimpijskie",
+        "koło WOS maturalne i olimpijskie",
+        "koło filozofii maturalne i olimpijskie",
+        "koło historii sztuki maturalne i olimpijskie",
+        "koło medialne",
+        "koło teologiczne",
+        "koło teatralne",
+        "koło artystyczno-dekoracyjne",
+        "liga debatancka",
+        "koło matematyki maturalne i olimpijskie",
+        "koło fizyki olimpijskie",
+        "koło chemii maturalne",
+        "koło biologii maturalne i olimpijskie",
+        "koło geografii maturalne i olimpijskie",
+        "laboratorium chemiczne",
+        "koło przedsiębiorczości olimpijskie",
+        "gry planszowe",
+        "Odyseja Umysłu",
+        "zajęcia z biznesu i przedsiębiorczości",
+        "biegi na orientację",
+        "SKS — gry drużynowe",
+        "SKS — piłka ręczna",
+        "SKS — siatkówka",
+        "SKS — siłownia"
+      ],
+      "unusual_activities": "SOFA — Sceniczny Otwarty Festiwal Artystyczny (muzyka, fotografia, malarstwo, film, moda, taniec, teatr; ponad 14 edycji); WICFEST (szkolny festiwal muzyczno-artystyczny); Odyseja Umysłu (Odyssey of the Mind — udział w światowym finale w USA); Poligon Przedsiębiorczości; program „Zwolnieni z teorii\" i „FLEX\"; szkoła zimowa z zajęciami lekcyjnymi i pracą metodą projektów; obowiązkowe wyjazdy fakultatywne dla klas III (humanistyczny, przyrodniczy, matematyczno-fizyczny); tutoring rozwojowy",
+      "interest_development": "Indywidualny Program Nauczania (36 godzin tygodniowo) — uczniowie swobodnie wybierają dwa przedmioty rozszerzone w klasie II; tutoring pomaga odkryć zdolności i zainteresowania oraz planować ścieżkę kariery; „jest tyle profili, ilu uczniów\" — filozofia szkoły; 65 godzin kół zainteresowań tygodniowo",
+      "volunteering": "program wychowawczy przewiduje organizowanie szkolnego wolontariatu i udział w akcjach charytatywnych organizacji pozarządowych; Stowarzyszenie Przyjaciół LXIV LO „Nienasycenie\" wpisuje zachęcanie do wolontariatu w cele statutowe; fundraising organizowany przez uczennice na wyjazd do USA (Odyseja Umysłu)",
+      "student_initiatives": "SOFA organizowana przez uczniów klasy II — poszukiwanie sponsorów, rekrutowanie jury, promocja w mediach społecznościowych, dekoracje, planowanie techniczne; samorząd inicjuje akcje i imprezy klasowe; fundraising na wyjazd na światowy finał Odysei Umysłu; uczniowie pełnią funkcje asystenckie w procesie nauczania",
+      "student_council": "aktywny Samorząd Uczniowski — przewodnicząca Magdalena Bobryk (klasa 3a), wiceprzewodnicząca Martyna Rozwoda (klasa 3a); zarząd złożony z reprezentantów wszystkich klas I–IV; posiada regulamin, ordynację wyborczą i uchwały; organizuje akcje i imprezy szkolne",
+      "justification": "Szkoła oferuje wyjątkowo bogatą i zróżnicowaną ofertę pozalekcyjną: 65 godzin kół tygodniowo, SOFA z 14-letnią tradycją jako wielodyscyplinarny festiwal organizowany przez uczniów, udział Odysei Umysłu na poziomie światowym, aktywny samorząd, 284 finalistów olimpiad i realne mechanizmy wspierania indywidualnego rozwoju. Uczniowie są faktycznymi organizatorami kluczowych wydarzeń."
+    },
+    "languages": {
+      "english": true,
+      "german": true,
+      "spanish": true,
+      "other": "francuski, rosyjski",
+      "bilingual_classes": false,
+      "bilingual_language": null,
+      "certificates": null,
+      "language_choice": "model mieszany",
+      "language_choice_details": "angielski nauczany na poziomie rozszerzonym od klasy I; drugi język obcy realizowany od klasy I (1 h/tyg. w I półroczu, 2 h/tyg. w II półroczu); uczniowie wybierają rozszerzenia językowe (spośród angielskiego, niemieckiego, francuskiego, hiszpańskiego) samodzielnie w III trymestrze klasy II; rosyjski obecny w kołach maturalnych, nie jest wymieniony jako rozszerzenie",
+      "level_groups": null,
+      "native_speakers": null,
+      "notes": "koła olimpijskie i maturalne z 5 języków (angielski, niemiecki, francuski, rosyjski, hiszpański); koła olimpijskie z angielskiego, niemieckiego i hiszpańskiego prowadzone przez specjalistów; wieloletnie wymiany z niemieckimi szkołami (Hanower od 1995, Mulheim od 2008) sugerują aktywne nauczanie języka niemieckiego; stypendium w Salamance — sygnał nauczania języka hiszpańskiego"
+    },
+    "classes": [
+      {
+        "letter": "1a",
+        "name": "angielski - rosyjski",
+        "extended_subjects": [
+          "język angielski"
+        ],
+        "notes": "język angielski (poziom rozszerzony), język rosyjski (poziom podstawowy)"
+      },
+      {
+        "letter": "1b",
+        "name": "niemiecki - angielski",
+        "extended_subjects": [
+          "język niemiecki"
+        ],
+        "notes": "język niemiecki (poziom rozszerzony), język angielski (poziom podstawowy)"
+      },
+      {
+        "letter": "1c",
+        "name": "francuski - angielski",
+        "extended_subjects": [
+          "język francuski"
+        ],
+        "notes": "język francuski (poziom rozszerzony), język angielski (poziom podstawowy)"
+      },
+      {
+        "letter": "1d",
+        "name": "hiszpański - angielski",
+        "extended_subjects": [
+          "język hiszpański"
+        ],
+        "notes": "język hiszpański (poziom rozszerzony), język angielski (poziom podstawowy)"
+      },
+      {
+        "letter": "1e",
+        "name": "angielski - francuski",
+        "extended_subjects": [
+          "język angielski"
+        ],
+        "notes": "język angielski (poziom rozszerzony), język francuski (poziom podstawowy)"
+      },
+      {
+        "letter": "1f",
+        "name": "angielski - hiszpański",
+        "extended_subjects": [
+          "język angielski"
+        ],
+        "notes": "język angielski (poziom rozszerzony), język hiszpański (poziom podstawowy)"
+      }
+    ],
+    "classes_notes": "Szkoła jest liceum eksperymentalnym (od 2019/2020) bez stałych profili przedmiotowych — uczniowie wybierają dwa przedmioty rozszerzone samodzielnie w III trymestrze klasy II, w grupach międzyklasowych. Klasy pierwszoklasowe różnicują się językiem wiodącym: 1a (angielski+rosyjski), 1b (niemiecki+angielski), 1c (francuski+angielski), 1d (hiszpański+angielski), 1e (angielski+francuski), 1f (angielski+hiszpański). Rok szkolny w trymestrach; lekcje 60 min; dwóch wychowawców na klasę.",
+    "infrastructure": {
+      "cafeteria": "stołówka",
+      "library": true,
+      "auditorium": null,
+      "nurse_office": true,
+      "specialized_labs": "laboratorium chemiczne (potwierdzone jako koło zainteresowań); inne pracownie nieopisane",
+      "building_condition": null,
+      "notes": "szatnia z szafkami na klucz (klucze z pokoju 104, kaucja 25 zł); mLegitymacja — legitymacja szkolna na telefonie; e-dziennik platforma Vulcan; kontakt przez Teams"
+    },
+    "sports": {
+      "courts": null,
+      "gyms": "sala gimnastyczna wymieniona jako miejsce uroczystości szkolnych; liczba i wyposażenie nieopisane",
+      "fitness_room": true,
+      "pool": false,
+      "access_outside_lessons": null,
+      "sports_clubs": "SKS — cztery grupy: gry drużynowe, piłka ręczna, siatkówka, siłownia; biegi na orientację; szkoła zimowa z kursami narciarskimi i snowboardowymi oraz pieszymi wycieczkami",
+      "sports_achievements": "1. miejsce w piłce ręcznej dziewcząt w dzielnicy Żoliborz (listopad 2025); najlepsza zawodniczka turnieju — Michalina Roszkowska z klasy 3D; awans do etapu warszawskiego",
+      "notes": "sport nie jest eksponowanym obszarem w materiałach szkoły; program wychowawczy wymienia „tworzenie bazy do uprawiania sportu w szkole\" jako cel; 5 nauczycieli WF w zespole"
+    },
+    "intellectual_profile": {
+      "humanities": {
+        "avg_score": 3.3,
+        "synthetic_score": 4
+      },
+      "stem": {
+        "avg_score": 3.0,
+        "synthetic_score": 3
+      },
+      "class_profiles_stem": "brak sztywnych profili; kierunek mat-fiz i przyrodniczy dostępny przez wyjazdy fakultatywne i koła olimpijskie",
+      "class_profiles_humanities": "brak sztywnych profili; kierunek humanistyczny dostępny przez wyjazdy fakultatywne i koła olimpijskie",
+      "clubs_stem": "koło maturalne z matematyki, chemii, biologii, geografii; koło olimpijskie z fizyki, matematyki, przedsiębiorczości, biologii, geografii; laboratorium chemiczne",
+      "clubs_humanities": "koło maturalne i olimpijskie z j. polskiego, historii, WOS, filozofii, historii sztuki; koło medialne, teologiczne, teatralne, artystyczno-dekoracyjne; liga debatancka; koła językowe (5 języków); SOFA (muzyka, fotografia, malarstwo, film, moda, taniec, teatr)",
+      "olympiads_stem": "olimpiada z fizyki, matematyki, chemii, biologii, geografii, przedsiębiorczości (potwierdzone kołami olimpijskimi)",
+      "olympiads_humanities": "olimpiada z języka angielskiego, hiszpańskiego, niemieckiego, języka polskiego, historii, WOS, filozofii, historii sztuki (potwierdzone kołami olimpijskimi)",
+      "justification": "Patron szkoły — Witkacy (malarz, dramaturg, filozof) — nadaje wyraźnie humanistyczno-artystyczny koloryt; SOFA i WICFEST to flagowe projekty artystyczne z wieloletnią tradycją; filozofia indywidualizmu i kreatywności, przynależność do Towarzystwa Szkół Twórczych, język materiałów podniosły i idealistyczny. Jednocześnie 284 finalistów olimpiad i szerokie koła ścisłe świadczą o solidnych kompetencjach w naukach ścisłych, choć tożsamość szkoły pozostaje bardziej humanistyczna."
+    },
+    "worldview": {
+      "left_avg_score": 2.8,
+      "left_synthetic_score": 3,
+      "right_avg_score": 2.0,
+      "right_synthetic_score": 2,
+      "justification": "Program profilaktyczno-wychowawczy szkoły zawiera wyraźne, operacyjne deklaracje inkluzywności (otwartość na różną tożsamość narodową, religijną i płciową, stosowanie inkluzywnego języka, wsparcie dla neuroróżnorodnych) — to najsilniejszy sygnał lewicowy. Patron Witkacy jako awangardysta i nonkonformista wzmacnia ten obraz. Sygnały prawicowe (obowiązek, tradycja, historia) są liczbowo obecne, ale w typowym dla każdej szkoły kontekście (dyscyplina szkolna, Wigilia, Dzień Patrona, upamiętnienie Korczaka). Szkoła nie angażuje się w kwestie polityczne wprost."
+    },
+    "school_balance": {
+      "academics_avg_score": 4.7,
+      "academics_synthetic_score": 5,
+      "hobbies_avg_score": 3.6,
+      "hobbies_synthetic_score": 4,
+      "justification": "Sygnały akademickie są wyjątkowo silne i konsekwentne: 13. miejsce w Polsce, 284 finalistów olimpiad na szczeblu centralnym, 100% zdawalność matur, koła maturalne z wszystkich przedmiotów, stypendia i nagrody finansowe za osiągnięcia — szkoła olimpijska bez wątpliwości. Sygnały pasji są równie realne, choć mniej eksponowane w oficjalnej komunikacji: SOFA (14+ edycji), WICFEST, 65 godzin kół tygodniowo, Odyseja Umysłu na poziomie światowym, tutoring nakierowany na odkrywanie zainteresowań. Szkoła łączy obie orientacje, ale nauka jest nadrzędna w hierarchii przekazu."
+    },
+    "innovation": {
+      "avg_score": 3.9,
+      "synthetic_score": 4,
+      "initiatives": "status liceum eksperymentalnego od 2019/2020 (zmieniony Szkolny Plan Nauczania, indywidualny wybór rozszerzeń); Program Tutoringu Rozwojowego od 2015/16 (obejmuje wszystkich uczniów klasy I); rok szkolny w trymestrach; lekcje 60-minutowe; dwóch wychowawców na klasę; funkcje asystenckie uczniów w procesie nauczania; w 2025/26 zaktualizowany program doradztwa zawodowego (model „Profil Absolwenta 2.0\"); mLegitymacja; e-portfolio uczniów; nowy operator stołówki z systemem elektronicznego zamawiania",
+      "extracurricular_topics": "SOFA obejmuje współczesne formy artystyczne (film, fotografia, moda); liga debatancka; koło medialne; zajęcia z biznesu i przedsiębiorczości; Odyseja Umysłu (kreatywność, praca zespołowa, konkurs o zasięgu światowym); Poligon Przedsiębiorczości; program doradztwa zawodowego uwzględnia kompetencje cyfrowe, zieloną gospodarkę i europejski rynek pracy",
+      "justification": "Szkoła jest formalnie liceum eksperymentalnym z wieloma konkretnymi innowacjami strukturalnymi odróżniającymi ją od typowego polskiego liceum (trymestry, lekcje 60-minutowe, brak stałych profili, tutoring). SOFA i Odyseja Umysłu świadczą o innowacyjności w sferze kultury szkolnej. Program wychowawczy uwzględnia aktualne tematy (neuroróżnorodność, cyberprzemoc, inkluzywność). Brak danych o szerokim zastosowaniu nowych technologii w dydaktyce i brak Erasmus+ umiarkowanie obniżają ocenę."
+    },
+    "message_coherence": {
+      "avg_score": 3.8,
+      "synthetic_score": 4,
+      "contradictions": "„99,9% zadowolonych uczniów\" — bez wskazania źródła ani metodologii; „nowocześnie wyposażona\" — bez konkretnych przykładów; „wymiany zagraniczne\" potwierdzone szczegółowo (Hanower od 1995, Mulheim od 2008), ale „współpraca z uczelniami\" bez nazw uczelni; programy „Zwolnieni z teorii\" i „FLEX\" wymieniane w menu bez opisu treści; drobna wewnętrzna niezgodność w kontakt.md dotycząca dnia zamkniętego sekretariatu (raz środa, raz czwartek); strona samorzad_inicjatywy.md pusta mimo sugestywnego tytułu; zakres agentów był spójny (range = 1), co świadczy o generalnie jednolitym przekazie",
+      "justification": "Główne hasła promocyjne szkoły są dobrze udokumentowane konkretnymi danymi: rankingi z precyzyjnymi pozycjami, wymiany zagraniczne z nazwami szkół i datami, SOFA z udokumentowanymi laureatami, 284 finalistów olimpiad. Brak źródła dla deklaracji „99,9% zadowolonych uczniów\", nierozwinięte wzmianki o programach i jedna pusta podstrona nieznacznie obniżają wiarygodność przekazu."
+    }
+  },
+  "survey": {
+    "source": "https://www.swiadomiewybieram.pl/szkola/warszawa/102672",
+    "scraped": "2026-03-08",
+    "survey_count": 12,
+    "matura_score_pct": 89.5,
+    "atmosphere_pct": 79.9,
+    "learning_enjoyment_pct": 71.0,
+    "student_relations_pct": 83.9,
+    "student_teacher_relations_pct": 72.5,
+    "teaching_modernity_pct": 74.4,
+    "recommendation_rate_pct": 92.6,
+    "break_quality_pct": 88.3,
+    "avg_study_time_after_school": "50 min",
+    "tutoring_usage": null,
+    "tutoring_cost": null,
+    "zwolnieni_z_teorii_projects": 2,
+    "lgbtq_friendly_ranking": null,
+    "student_count_2022": 544,
+    "year_founded": 1990,
+    "matura_pass_rate_pct": 100.0,
+    "amenities": [
+      "Sklepik",
+      "Miejsce do odpoczynku (kanapy itp.)",
+      "Bufet",
+      "Przystanek MPK w pobliżu",
+      "Stojak na rowery",
+      "Siłownia",
+      "Szafki"
+    ]
+  }
+}

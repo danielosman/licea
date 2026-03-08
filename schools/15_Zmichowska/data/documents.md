@@ -48,6 +48,14 @@
 
 ---
 
+## Klasy pierwsze w roku szkolnym 2026/2027
+
+- url: https://cloud-8.edupage.org/cloud/Klasy_pierwsze_na_rok_szkolny_2026-27_poprawione_4.03.pdf?z%3AdWzGFBMD7nVkAhi5F56SNXT%2FoUGYMWjTn4TnpF6y7sJRWwmHy7YOubLn4%2FiOUyxOIEmZfEUku5VubEaparaTGw%3D%3D
+- from_page: overview
+- content_file: klasy_pierwsze_2026_2027
+
+---
+
 ## SPN klasy 1 (rocznik 2024–2028)
 
 - url: https://cloud-3.edupage.org/cloud/SZKOLNY_PLAN_NAUCZANIA_2024-25_1_klasy.pdf?z%3AAfWM%2FwlEJKDBqzVibXSmwmLkOzPlEb%2FaLmZ6ap3fbhY7AeCfdzDB82t93ogujQi8
